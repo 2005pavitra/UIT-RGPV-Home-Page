@@ -1,4 +1,5 @@
-/* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +8,14 @@
     max-width: 100%;
 }
 
-/* General Header Styling */
+
 header {
-    /* background: #002147; Dark Blue Shade */
-    /* color: white; */
+    
     padding: 10px 20px;
     width: 100%;
     
 }
 
-/* Top Bar Styling */
 .top-bar {
     display: flex;
     align-items: center;
@@ -26,7 +25,7 @@ header {
     border-bottom: 2px solid white;
 }
 
-/* Logo and Header Text */
+
 .logo {
     display: flex;
     align-items: center;
@@ -34,7 +33,7 @@ header {
 }
 
 .logo img {
-    width: 60px; /* Adjust logo size */
+    width: 60px; 
     height: auto;
 }
 
@@ -48,7 +47,7 @@ header {
     font-weight: bold;
 }
 
-/* Default Styles */
+
 nav {
     background: #003366;
     padding: 10px 20px;
@@ -81,7 +80,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Menu Toggle Button */
+
 .menu-toggle {
     font-size: 1.8rem;
     background: none;
@@ -91,10 +90,19 @@ nav {
     display: none;
 }
 
-/* Mobile Styles */
+
 @media (max-width: 768px) {
+    .header-text h1{
+        font-size: .75rem;
+    }
+
+    .header-text h4{
+        font-size: .5rem;
+    }
+
     .menu-toggle {
         display: block;
+        font-size: 12px;
     }
 
     .nav-links {
@@ -102,21 +110,43 @@ nav {
         flex-direction: column;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
-        background: #003366;
+        left: 50%;
+        width: 50%;
+        background: #0f3c4c;
         text-align: center;
         padding: 10px 0;
         transition: all 0.3s ease-in-out;
         z-index: 1000;
+        font-size: 12px;
     }
 
     .nav-links.show {
         display: flex;
+        gap: 2px;
+         
+        a {
+            padding: 10px 20px;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
     }
 
     .nav-links li {
-        padding: 10px 0;
+        padding: 5px 0;
+        font-size: 12px;
+    }
+
+    .banner{
+        margin{
+            margin-top: 0px !important;
+            height: 200px !important;
+        }
+    }
+
+    nav{
+        margin-top: 0px;
     }
 }
 
